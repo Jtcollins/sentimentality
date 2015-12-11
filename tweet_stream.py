@@ -16,21 +16,21 @@ import traceback
 from getpass import getpass
 
 #Variables that contains the user credentials to access Twitter API
-access_token = '2451265213-jTWo0VnQ2RHCCWRtVjj93CHMmm9fEaNYAAvRX5M'
-access_token_secret = 'g1tIqLpT7BDNTqeM3Nx2LWnvO1kejQLUlYsQgGHtoEWbJ'
-consumer_key = 'Gooa7ORk4OGLy9YA3iLnETU0R'
-consumer_secret = 'SJ6UhZaqlrAlAea4NEOfjjPYmeoKJ73nSfKstFRRnSP1ioIKBr'
+access_token = '###-###'
+access_token_secret = '###'
+consumer_key = '###'
+consumer_secret = '###'
 
 MAPS_QUERY = "https://maps.googleapis.com/maps/api/geocode/json?latlng="
 #40.714224,-73.961452
-GOOGLE_API_KEY = "&key=AIzaSyBgE0UulAxSftK-3a1ejqJCshjoi5ippSM"
+GOOGLE_API_KEY = "&key=######"
 
 count, tweets = 0, []
 session = db_ops.connect_to_db()
 
 def get_sentiment( text):
   url = "http://gateway-a.watsonplatform.net/calls/text/TextGetTextSentiment"
-  alchemy_api_key = "47bca9f3b818d2558e7bf98bf5016f65731e3819"
+  alchemy_api_key = "######"
   data = {'apikey':alchemy_api_key, 'text':text, 'outputMode':'json'}
   try:
     r = requests.post(url, data)
